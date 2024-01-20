@@ -5,81 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="HTML, CSS" />
     <meta name="description" content="JonCorp Official Site" />
-    <title>Jonathan Story Testing</title>
+    <title>JonCorp Website</title>
     <style>
-      em {
-        color: red;
-        font-style: normal;
+      .container {
+        position: relative;
+        display: block;
+        margin: auto;
+        width: 50%;
       }
-      p.things {
-        font-family: "Times New Roman", Times, serif;
-        font-size: 20px;
-        color: black;
+
+      .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        max-height: fit-content;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+      }
+
+      .middle {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+
+      .container:hover .image {
+        opacity: 0.3;
+      }
+
+      .container:hover .middle {
+        opacity: 1;
+      }
+
+      .text {
+        background-color: #3f0ee1;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        padding: 16px 32px;
+      }
+      h1.top {
         text-align: center;
-        text-indent: 50px;
-        line-height: 1.5;
       }
     </style>
   </head>
   <body>
-    <a href="#section-jon">abt Jon</a>
-    <a href="mailto:storyjonathan123@gmail.com">Email</a>
-    <h1>JonCorp</h1>
-    <p class="things">
-      About JonCorp: JonCorp, a visionary force in the corporate landscape,
-      stands at the forefront of innovation and technological advancement.
-      Established with a mission to redefine industry standards, JonCorp has
-      quickly become a leading player in various sectors, showcasing excellence
-      in every venture it undertakes. Core Values: At JonCorp, our core values
-      revolve around innovation, integrity, and inclusivity. We believe in
-      pushing boundaries, fostering a culture of creativity, and maintaining the
-      highest ethical standards in all our endeavors. Our commitment to
-      diversity ensures that our team represents a rich tapestry of talents and
-      perspectives, driving us towards unparalleled success. Cutting-Edge
-      Technologies: Embracing cutting-edge technologies, JonCorp consistently
-      pioneers breakthroughs that shape the future. Whether it's artificial
-      intelligence, sustainable energy solutions, or advanced materials, our
-      dedicated team of experts works tirelessly to bring revolutionary ideas to
-      life. We're not just a company; we're a hub of innovation. Global
-      Presence: With a global footprint, JonCorp operates on an international
-      scale. Our headquarters, strategically located for accessibility and
-      collaboration, serves as the nerve center for our diverse portfolio of
-      projects. From North America to Asia, JonCorp's influence is felt across
-      continents, creating a positive impact on societies and economies
-      worldwide. Partnerships and Collaborations: JonCorp understands the power
-      of collaboration. We actively seek partnerships with like-minded
-      organizations, startups, and research institutions to foster a culture of
-      shared success. Through collaborative efforts, we amplify our collective
-      capabilities, bringing transformative solutions to the forefront of
-      industries. Sustainability Initiatives: Committed to environmental
-      stewardship, JonCorp integrates sustainability into every aspect of its
-      operations. Our eco-friendly practices, from green infrastructure to
-      responsible sourcing, reflect our dedication to building a better, more
-      sustainable future for generations to come. Employee-Centric Culture:
-      JonCorp recognizes that our most valuable assets are our employees. We
-      prioritize a supportive
-    </p>
-    <a href="about.html">Walker</a>
+    <h1 class="top">Jonathan Story</h1>
+
+    <div class="container" id="samford">
+      <img
+        src="/Images/samfordhall.jpg"
+        alt="samfordhall"
+        class="image"
+        style="max-width: 100%"
+        style="display: block"
+        style="margin: auto"
+      />
+      <div class="middle">
+        <div class="text">ABOUT ME</div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("samford").addEventListener("click", function () {
+        window.location.href = "about.html";
+        target = "_blank";
+      });
+      document.getElementById("samford").style.cursor = "pointer";
+    </script>
+
+    <a href="#section-jon"></a>
+    <a href="mailto:storyjonathan123@gmail.com">My Email</a>
+
+    <p class="things"></p>
     <p>I love <em>JonCorp</em>!</p>
-    <a href="Images/walkerreaction.PNG">Click</a>
+    <a href="Images/walkerreaction.PNG" target="_blank">Click</a>
     <h2 id="section-jon">Abt Jon</h2>
-    <p class="things">
-      Jon is an individual currently pursuing a degree in electrical engineering
-      at Auburn University. As an electrical engineering student, Jon is likely
-      engaged in a rigorous academic curriculum that includes studying topics
-      such as circuits, electronics, signals, and systems. Auburn University,
-      located in Alabama, is known for its strong engineering programs, and Jon
-      is likely benefiting from a quality education in this field. In addition
-      to academics, Jon may be involved in extracurricular activities related to
-      electrical engineering or other interests. This could include
-      participation in engineering clubs, projects, or research initiatives.
-      Auburn University offers various resources and opportunities for students
-      to gain practical experience and enhance their skills in preparation for
-      their future careers. Overall, Jon's journey as an electrical engineering
-      student at Auburn University likely involves a combination of academic
-      challenges, hands-on experiences, and personal growth as he works towards
-      completing his degree and entering the field of electrical engineering."
-    </p>
+    <p class="things"></p>
     <a href="https://google.com" target="_blank">Google</a>
   </body>
 </html>
